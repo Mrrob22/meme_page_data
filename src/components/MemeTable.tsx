@@ -23,7 +23,7 @@ const MemeTable: React.FC = () => {
         if (!isValid) {
             setCookie('memes', memes, { path: '/' });
         }
-    }, []);
+    }, [cookies.memes, setCookie]);
 
     const openEditModal = (meme: Meme) => {
         const ref = rowRefs.current[meme.id];

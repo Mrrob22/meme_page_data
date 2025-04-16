@@ -12,7 +12,7 @@ const MemeList: React.FC = () => {
         if (cookies.memes && JSON.stringify(cookies.memes) !== JSON.stringify(memeList)) {
             setMemeList(cookies.memes);
         }
-    }, [cookies.memes]);
+    }, [cookies.memes, memeList]);
 
     const renderedMemes = React.useMemo(() => {
         return memeList.map((meme) => (
